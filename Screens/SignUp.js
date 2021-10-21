@@ -10,8 +10,8 @@ import {
   } from 'react-native';
 function SignUP() {
     return (
-        <View>
-            Signup
+        <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+            <Text style={{fontSize:20, fontWeight:'800',}}>Signup Page</Text>
         </View>
             
         

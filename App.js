@@ -1,40 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Login from './Screens/Login';
+import SignUp from './Screens/SignUp';
+const Stack = createNativeStackNavigator();
 
-import React from 'react';
-
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-
-
-const App = () =>{
-  return(
-    <View style = {styles.container}>
-      <Text>Type here</Text>
-
-    </View>
-  )
-}
-const styles = StyleSheet.create({
-  container:{
-     flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  }
-});
-
-export default App;
+const MyStack = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+export default MyStack
